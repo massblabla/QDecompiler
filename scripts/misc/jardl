@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This file is part of QDecompiler.
+#
+# QDecompiler is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as 
+# published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# QDecompiler is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License along with QDecompiler. If not, see <https://www.gnu.org/licenses/>.
+
+cd ../bin
+
+# specialsource
+curl https://repo1.maven.org/maven2/net/md-5/SpecialSource/1.10.0/SpecialSource-1.10.0.jar
+curl https://repo1.maven.org/maven2/com/google/guava/guava/20.0/guava-20.0.jar
+curl https://repo1.maven.org/maven2/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar
+curl https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/9.1/asm-commons-9.1.jar
+curl https://repo1.maven.org/maven2/org/ow2/asm/asm/9.1/asm-9.1.jar
+curl https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/9.1/asm-tree-9.1.jar
+curl https://repo1.maven.org/maven2/org/ow2/asm/asm-analysis/9.1/asm-analysis-9.1.jar
+
+# cfr
+curl https://repo1.maven.org/maven2/org/benf/cfr/0.152/cfr-0.152.jar

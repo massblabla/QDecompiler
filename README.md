@@ -1,5 +1,5 @@
 # QDecompiler
-### Version 1.2-pre1
+### Version 1.2.0-pre1
 Welcome to **QDecompiler**! This is a **Minecraft modding and code researching toolkit** based off of **GlowstoneDecompiler**.  
 Like GlowstoneDecompiler, **QDecompiler** is just bunch of scripts that will run JARs needed to deobfuscate and decompile **Minecraft** using **Mojang's mappings**.  
   

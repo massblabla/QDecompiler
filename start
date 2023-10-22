@@ -10,6 +10,7 @@
 #
 # You should have received a copy of the GNU Lesser General Public License along with QDecompiler. If not, see <https://www.gnu.org/licenses/>.
 
+# Remove temporary files
 cd bin
 rm temp.txt
 cd ..
@@ -26,11 +27,19 @@ cd ../..
 cd src/minecraft
 rm temp.txt
 cd ../..
+cd tmp
+rm temp.txt
+cd ..
 sleep 5
+
+# Starting Decompilation
 cd scripts
 chmod a+x versionchoose
 chmod a+x decompile
 ./versionchoose
 sleep 5
 ./decompile
+
+# Exit
 sleep 2
+exit

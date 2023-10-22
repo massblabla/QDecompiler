@@ -12,51 +12,142 @@
 
 cd ../tmp
 
+# Prompt
 echo "Select these versions and enter below."
 PS3='Choose your desired Minecraft version to decompile: '
-choices=("19w36a" "1.20" "1.20.1" "23w31" "Exit")
-select chc in "${choices[@]}"; do
-    case $chc in
+versions=("19w36a" "1.20" "1.20.1" "23w31a" "23w32a" "23w33a" "23w35a" "1.20.2-pre1" "1.20.2-pre2" "1.20.2-pre3" "1.20.2-pre4" "1.20.2-rc1" "1.20.2" "1.20.3" "Cancel")
+select ver in "${versions[@]}"; do
+    case $ver in
         "19w36a")
             echo ""
             echo "You chose 19w36a"
             sleep 2
-            # mapping
-            curl https://piston-data.mojang.com/v1/objects/f483c4aa381c8f935d7a010751f12eb19851659f/client.txt
-            # jar
-            curl https://piston-data.mojang.com/v1/objects/54a359d0b47818d85c61db79ec742f7fdab5b914/client.jar
+            echo "Versions 19w36a to 1.20-rc1 coming soon"
             ;;
         "1.20")
             echo ""
             echo "You chose 1.20"
             sleep 2
             # mapping
-            curl https://piston-data.mojang.com/v1/objects/a4cd9a97400f7ecfe4dba23e427549ebc5815d66/client.txt
+            curl --silent https://piston-data.mojang.com/v1/objects/a4cd9a97400f7ecfe4dba23e427549ebc5815d66/client.txt > client.txt
             # jar
-            curl https://piston-data.mojang.com/v1/objects/e575a48efda46cf88111ba05b624ef90c520eef1/client.jar
+            curl --silent https://piston-data.mojang.com/v1/objects/e575a48efda46cf88111ba05b624ef90c520eef1/client.jar > client.jar
             ;;
         "1.20.1")
             echo ""
             echo "You chose 1.20.1"
             sleep 2
             # mapping
-            curl https://piston-data.mojang.com/v1/objects/6c48521eed01fe2e8ecdadbd5ae348415f3c47da/client.txt
+            curl --silent https://piston-data.mojang.com/v1/objects/6c48521eed01fe2e8ecdadbd5ae348415f3c47da/client.txt > client.txt
             # jar
-            curl https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar
+            curl --silent https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar > client.jar
             ;;
         "23w31a")
             echo ""
             echo "You chose 23w31a"
             sleep 2
             # mapping
-            curl https://piston-data.mojang.com/v1/objects/1c17aca622d87e393aae115137dcfd570b9c5d7b/client.txt
+            curl --silent https://piston-data.mojang.com/v1/objects/1c17aca622d87e393aae115137dcfd570b9c5d7b/client.txt > client.txt
             # jar
-            curl https://piston-data.mojang.com/v1/objects/ca51bf36913a7333c055096a52a3a96fbdb11813/client.jar
+            curl --silent https://piston-data.mojang.com/v1/objects/ca51bf36913a7333c055096a52a3a96fbdb11813/client.jar > client.jar
             ;;
-	    "Exit")
-	        echo "You chose exit"
+        "23w32a")
+            echo ""
+            echo "You chose 23w32a"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/537ce3a73b6a75008e5d0a8a0afe26d58f27fe3f/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/08314fae8fbff190e056a8ae4b9fc9cd603436f6/client.jar > client.jar
+            ;;
+        "23w33a")
+            echo ""
+            echo "You chose 23w33a"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/d4a7844ac9c07c66e1a4b6f4983e03b661dbbe55/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/94e539731458bd2e98a204892b0ed55f715a5011/client.jar > client.jar
+            ;;
+        "23w35a")
+            echo ""
+            echo "You chose 23w35a"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/8351d66d8b3dbd88ef0c3b8b1beb45e95346b51c/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/1359e52fb4b254a0e6563fb7a4b3676da5431af2/client.jar > client.jar
+            ;;
+        "1.20.2-pre1")
+            echo ""
+            echo "You chose 1.20.2-pre1"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/a87ae393f7368e31d6e130014e86872803cdd3f0/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/fbbd743e671b0faa872be8ff8caab6189178912c/client.jar > client.jar
+            ;;
+        "1.20.2-pre2")
+            echo ""
+            echo "You chose 1.20.2-pre2"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/27a70424893dbc48b848701b09194ed5adf0a07f/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/0159c75351c359c204682b78e5a5b59cad5d5681/client.jar > client.jar
+            ;;
+        "1.20.2-pre3")
+            echo ""
+            echo "You chose 1.20.2-pre3"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/ebc9e6d93393d8a3973bb30bd318ca12dae515ff/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/b04c6a6bd4c7360779f32571058452198136d805/client.jar > client.jar
+            ;;
+        "1.20.2-pre4")
+            echo ""
+            echo "You chose 1.20.2-pre4"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/7fb796593419e447038193393aa700a83f6a7244/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/dd8a62739ca11bec02cb991797f636227315ae3d/client.jar > client.jar
+            ;;
+        "1.20.2-rc1")
+            echo ""
+            echo "You chose 1.20.2-rc1"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/a3db1df2f34e8ab56fc5cdb54a7945f2cd4938ae/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/a25038f82a1021ca8961eb78e4a8874652741cfd/client.jar > client.jar
+            ;;
+        "1.20.2")
+            echo ""
+            echo "You chose 1.20.2"
+            sleep 2
+            # mapping
+            curl --silent https://piston-data.mojang.com/v1/objects/6b9342ad92c7eb56bd4a349ac73ecca2c6d8f24e/client.txt > client.txt
+            # jar
+            curl --silent https://piston-data.mojang.com/v1/objects/aeb66414f7c04fe66b10b8a45bf736bf9bda0fbf/client.jar > client.jar
+            ;;
+        "1.20.3")
+            echo ""
+            echo "You chose 1.20.3"
+            sleep 2
+            echo "1.20.3 coming soon"
+            ;;
+	    "Cancel")
+            echo ""
+	        echo "You chose Cancel"
+            sleep 2
 	        exit
 	        ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "Invalid option $REPLY, please retry.";;
     esac
 done
+
+# Exit
+sleep 2
+exit

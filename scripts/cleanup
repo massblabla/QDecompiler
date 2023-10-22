@@ -10,6 +10,7 @@
 #
 # You should have received a copy of the GNU Lesser General Public License along with QDecompiler. If not, see <https://www.gnu.org/licenses/>.
 
+# Prompt
 echo "Are you sure you want to cleanup? It's unrecoverable."
 PS3='Choose your desired decision: '
 choices=("Yes" "No")
@@ -41,3 +42,7 @@ select chc in "${choices[@]}"; do
         *) echo "invalid option $REPLY";;
     esac
 done
+
+# Exit
+sleep 2
+exit

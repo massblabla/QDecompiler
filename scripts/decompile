@@ -13,13 +13,13 @@
 echo "If it fails, please check your Java installation. Or you don't have Minecraft."
 sleep 5
 
-# jar
+# JAR
 echo "Downloading JARs..."
 chmod a+x misc/jardl
 ./misc/jardl
 sleep 2
 
-# copy libs
+# Copying libraries from .minecraft
 echo "Now it'll copy the needed libraries for Minecraft to work."
 echo "This can take long, depending on your computer."
 cd ../jars
@@ -29,7 +29,7 @@ chmod a+x misc/eclipsecp
 ./misc/eclipsecp
 sleep 2
 
-# dec/deo process
+# Decompilation/deobfuscation process
 cd ../bin
 
 echo "Now it'll start deobfuscation."
